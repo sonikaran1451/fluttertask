@@ -14,12 +14,21 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+
+ @override
+  void initState() {
+
+    _fetchData();
+    super.initState();
+  }
   final TextEditingController numberfirst = TextEditingController();
   final TextEditingController numbersecond = TextEditingController();
   String _result = '';
   String _question = '';
   String _answer = '';
    List<String> history = [];
+
+
 
   Future<void> _fetchData() async {
     final response =
