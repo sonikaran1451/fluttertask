@@ -104,6 +104,7 @@ class _MyAppState extends State<MyApp> {
                   ElevatedButton(
                     onPressed: () {
                       _addNumbers();
+                      _fetchData();
                  
                     },
                     child: const Text('Add'),
@@ -112,10 +113,10 @@ class _MyAppState extends State<MyApp> {
                     _result,
                     style: const TextStyle(fontSize: 20),
                   ),
-                  ElevatedButton(
-                    onPressed: _fetchData,
-                    child: const Text('Fetch Data'),
-                  ),
+                  // ElevatedButton(
+                  //   onPressed: _fetchData,
+                  //   child: const Text('Fetch Data'),
+                  // ),
                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: history.map((item) {
